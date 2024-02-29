@@ -1,0 +1,272 @@
+body {
+    background-image: url("../img/background.gif");
+}
+
+.home .logo img {
+    width: 60vw;
+    margin: 0 20%;
+
+}
+
+.home .links {
+    display: flex;
+    flex-direction: row;
+    margin: 0 35%;
+}
+
+.home .links img {
+    width: 85%;
+}
+
+.home .play,
+.home .instructions {
+    transition: all 0.5s ease;
+}
+
+#input_name {
+    width: 10vw;
+    height: 5vh;
+}
+
+#opacity_in_game_over {
+    z-index: -1;
+}
+
+.container.circles,
+.container.play {
+    display: flex;
+    align-items: center;
+}
+
+.container.play {
+    margin: 10px auto;
+    justify-content: space-between;
+}
+
+.container.circles {
+    width: fit-content;
+}
+
+.circle {
+    height: 30vw;
+    width: 30vw;
+    position: relative;
+    border: 4px solid black;
+    border-radius: 50%;
+    margin: auto 5px;
+    background-image: url('../img/background_card.jpg');
+}
+
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.hidden,
+.hidden * {
+    visibility: hidden;
+    position: absolute !important;
+    height: 0px;
+    width: 0px;
+}
+
+.img {
+    position: absolute;
+    width: auto;
+}
+
+.img:nth-child(10) {
+    top: 23.3%;
+    right: 63%;
+    height: 32%;
+    rotate: 110deg;
+}
+
+.img:nth-child(2) {
+    top: 57%;
+    right: 70%;
+    height: 21.27%;
+    rotate: -71deg;
+}
+
+.img:nth-child(3) {
+    top: 58%;
+    right: 8.7%;
+    height: 23.5%;
+    rotate: 205deg;
+}
+
+.img:nth-child(4) {
+    top: 47.4%;
+    right: 34.3%;
+    height: 33%;
+    rotate: 192deg;
+}
+
+.img:nth-child(5) {
+    top: 5%;
+    right: 51%;
+    height: 20%;
+}
+
+.img:nth-child(6) {
+    top: 5%;
+    right: 21%;
+    height: 25%;
+    rotate: 26deg;
+}
+
+.img:nth-child(7) {
+    top: 27.4%;
+    right: 42.4%;
+    height: 16%;
+}
+
+.img:nth-child(8) {
+    top: 31%;
+    right: 5.6%;
+    height: 25%;
+    rotate: -64deg;
+}
+
+.img:nth-child(9) {
+    top: 79.5%;
+    right: 49%;
+    height: 18.5%;
+    rotate: 12deg;
+}
+
+#timer {
+    width: fit-content;
+    margin: -6% auto;
+    font-size: 433%;
+    font-weight: bolder;
+    position: relative;
+}
+
+.blink::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    opacity: 50%;
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    right: -48%;
+    animation: blink 0.25s infinite alternate;
+    z-index: -1;
+}
+
+#logo,
+#score {
+    width: 20%;
+}
+
+#logo {
+    rotate: 90deg;
+}
+
+#score {
+    font-weight: bolder;
+    font-size: 200%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#score .inner {
+    position: relative;
+}
+
+.container.user {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 20vh auto;
+    width: 30vw;
+    height: 40vh;
+}
+
+.container.user form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#msg_container {
+    margin: 3px auto; 
+    /* width: fit-content; */
+    display: inline;
+    height: 50px;
+}
+
+#msg_container,
+.container.user form .sign_in {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+#button_play {
+    width: 50px;
+    height: 50px;
+}
+
+.container.game_over {
+    background-color: white;
+    width: 67%;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2% 0;
+    align-items: center;
+}
+
+.container.game_over .logo {
+    width: 100%;
+}
+
+.container.game_over .home {
+    display: inline;
+    width: fit-content;
+}
+
+.container.game_over .to_home {
+    height: 25vh;
+    width: auto;
+}
+
+.winner {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    /* width: 160px; */
+    transition: left 2s;
+    transition-timing-function: cubic-bezier(0.4, -0.3, 0.58, 1), ease;
+}
+
+.winner img {
+    bottom: 10px;
+    left: 300%;
+    /* height: 160px; */
+    width: auto;
+    position: absolute;
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}

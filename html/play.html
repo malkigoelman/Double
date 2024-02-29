@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double</title>
+    <link rel="stylesheet" href="../styles/css.css">
+    <link rel="icon" href="../img/29.webp">
+</head>
+
+<body>
+    <!-- <area shape="" coords="" href="" alt=""> -->
+    <div id="opacity_in_game_over">
+        <div class="container user">
+            <img src="../img/logo.webp" alt="לוגו יפה!">
+            <div id="msg_container">  </div>
+            <form>
+                <input type="text" id="input_name" placeholder="name" data-pattern="[a-zA-Zא-ת\d ]{2,}"
+                    data-error_msg="יש להכניס שם עם לפחות שני תווים" required>
+                <button class="sign_in">לכניסה</button>
+            </form>
+            <a id="button_play" href="play.html"></a>
+        </div>
+        <div class="container play hidden">
+            <img src="../img/logo.webp" id="logo" alt="לוגו יפה!">
+            <div>
+                <div class="container circles">
+                    <div class="first circle"><img src="../img/cover_card.svg" class="cover"></div>
+                    <div class="second circle"><img src="../img/cover_card.svg" class="cover"></div>
+                </div>
+                <div id="timer">15</div>
+            </div>
+            <div id="score">
+                <div class="user_name"></div>
+                <div><label class="score">score: <label>0</label></label></div>
+                <div><label class="best">best: <label>0</label></label></div>
+                <div><label class="live">live: <label>5</label></label></div>
+            </div>
+        </div>
+    </div>
+    <div class="container game_over hidden">
+        <img src="../img/game_over2.webp" alt="logo" class="logo">
+        <a href="../home.html" class="home"><img src="../img/to home.webp" alt="to_home" class="to_home"> </a>
+    </div>
+    <div class="winner hidden">
+        <img src="../img/winner2.webp" alt="winner">
+    </div>
+    <audio id="press">
+        <source src="../audio/press_card.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="game_over">
+        <source src="../audio/game_over.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="corect_card">
+        <source src="../audio/corect.mp3" type="audio/mpeg">
+    </audio>
+    <script src="../js/js.js"></script>
+</body>
+
+</html>
